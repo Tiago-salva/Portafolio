@@ -186,7 +186,6 @@ html {
 .skills__container,
 .hobbies__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
@@ -194,7 +193,7 @@ html {
 
 .skill__element,
 .hobbie__element {
-    width: 150px;
+    width: 47%;
     height: 110px;
     background-color: var(--white);
     border-radius: 5px;
