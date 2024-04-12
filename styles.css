@@ -8,7 +8,6 @@
     --blue:#769FCD;
     --dark-blue:#1677e6;
     --red:#dd1212;
-    --padding: 30px 20px;
 }
 
 * {
@@ -35,13 +34,14 @@ html {
 .header {
     width: 100%;
     height: 60px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: var(--blue);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .header__name {
@@ -114,10 +114,6 @@ html {
     margin: auto 0;
 }
 
-.header__nav-item:hover {
-    background-color: var(--light-blue);
-}
-
 .header__nav-item > a {
     width: 150px;
     text-decoration: none;
@@ -152,7 +148,7 @@ html {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 40px 30px;
     gap: 15px;
 }
 
@@ -175,7 +171,7 @@ html {
 .hobbies {
     background-color: var(--grey);
     height: auto;
-    padding: 30px 20px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -233,7 +229,7 @@ html {
     background-color: var(--light-blue);
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 40px 30px;
     gap: 30px;
 }
 
@@ -258,27 +254,23 @@ html {
     font-weight: 700;
 }
 
-/* Projectos */
-.projectos {
+/* Proyectos */
+.proyectos {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 30px 20px;
+    padding: 40px 30px;
     background-color: var(--grey);
 }
 
-.projectos__title {
+.proyectos__title {
     font-size: 1.4rem;
 }
 
-.projectos__container {
+.proyectos__container {
     display: flex;
     flex-direction: column;
     gap: 70px;
-}
-
-.projecto__element {
-
 }
 
 .proyecto__element-img {
@@ -289,10 +281,6 @@ html {
 .proyecto__element-title {
     font-size: 1.2rem;
     font-weight: 700;
-}
-
-.proyecto__element-description {
-
 }
 
 .buttons__container {
@@ -326,7 +314,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 30px 20px;
+    padding: 40px 30px;
     background-color: var(--light-blue);
 }
 
@@ -351,14 +339,15 @@ html {
     font-size: 1.2rem;
     padding: 5px 10px;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .contacto__form-input:invalid {
-    border: 1px solid var(--red);
+    border-bottom: 5px solid var(--red);
 }
 
 .contacto__form-input:valid {
-    border: 1px solid var(--dark-blue);
+    border-bottom: 5px solid var(--dark-blue);
 }
 
 .contacto__form-input:focus,
@@ -381,6 +370,10 @@ html {
     transition: all 0.3s ease;
     font-size: 1rem;
     padding: 15px 10px;
+}
+
+#mensaje-input {
+    resize: none;
 }
 
 .btn-enviar-mensaje {
@@ -411,6 +404,493 @@ html {
     color: var(--dark-blue);
 }
 
-.footer__paragrap {
+/* Mediaquerie Tablet */
+@media(min-width: 768px) {
+    /* Header */
+    .header {
+        height: 80px;
+    }
 
+    .header__name {
+        font-size: 2rem;
+    }
+
+    .hamburger-icon {
+        width: 35px;
+        height: auto;
+    }
+
+    .hamburger-icon > span {
+        height: 7px;
+    }
+
+    .hamburger-icon > .line-1.active {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger-icon > .line-3.active {
+        transform: translateY(-14px) rotate(-45deg);
+    }
+
+    .header__nav {
+        top: 80px;
+    }
+
+    .header__nav.displayed {
+        height: calc(100vh - 80px);
+    }
+
+    .header__nav-item {
+        font-size: 2rem;
+    }
+
+    /* Presentacion */
+    .presentation {
+        height: 35vh;
+    }
+
+    .presentation__title {
+        font-size: 3.5rem;
+    }
+
+    .presentation__paragraph {
+        font-size: 1.8rem;
+    }
+
+    /* About me */
+    .about-me {
+        gap: 30px;
+    }
+
+    .about-me__title {
+        font-size: 2.3rem;
+        margin-bottom: 0;
+    }
+    
+    .about-me__paragraph {
+        font-size: 1.8rem;
+        line-height: 40px;
+    }
+
+    /* Skills and Hobbies*/
+    .skills {
+        margin-bottom: -1px;
+    }
+
+    .skills,
+    .hobbies {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .skills__title,
+    .hobbies__title {
+        font-size: 2.3rem;
+    }
+
+    .skills__container,
+    .hobbies__container {
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .skill__element,
+    .hobbie__element {
+        width: 100%;
+        height: 140px;
+        justify-content: normal;
+    }
+
+    .skill__element:nth-of-type(3),
+    .hobbie__element:nth-of-type(3) {
+        flex-grow: 0;
+    }
+
+    .skill__element-icon,
+    .hobbie__element-icon {
+        height: 60px;
+        width: 50px;
+    }
+
+    .skill__element-title,
+    .hobbie__element-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    /* Formacion academica */
+    .formacion__title {
+        font-size: 2.3rem;
+    }
+    
+    .formacion__container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .formacion__element {
+        width: 100%;
+    }
+    
+    .formacion__element-img {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .formacion__element-title {
+        font-size: 1.5rem;
+    }
+
+    .formacion__element-date {
+        font-size: 1.2rem;
+    }
+
+    /* Proyectos */
+    .proyectos {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        background-color: var(--grey);
+    }
+
+    .proyectos__title {
+        font-size: 2.3rem;
+    }
+
+    .proyecto__element-img {
+        height: 430px;
+        width: 100%;
+    }
+
+    .proyecto__element-title {
+        font-size: 2rem;
+    }
+
+    .proyecto__element-paragraph {
+        font-size: 1.5rem;
+    }
+
+    .buttons__container {
+        margin-top: 15px;
+    }
+
+    .buttons__container > a {
+        padding: 15px 30px;
+        font-size: 1.4rem;
+    }
+
+    .btn-repositorio {
+        color: var(--white);
+        background-color: var(--dark-blue);
+    }
+
+    .btn-demo {
+        color: var(--dark-blue);
+        background-color: var(--white);
+        border: 1px solid var(--dark-blue);
+    }
+
+    /* Contacto */
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        background-color: var(--light-blue);
+    }
+
+    .contacto__title {
+        font-size: 2.3rem;
+    }
+
+    .contacto__form {
+        gap: 40px;
+    }
+
+    .contacto__form-input {
+        height: 90px;
+        font-size: 2rem;
+    }
+
+    .contacto__form-input:focus,
+    .contacto__form-input.no-empty {
+        padding: 40px 10px 5px 10px;
+    }
+
+    .contacto__form-input:focus + label,
+    .contacto__form-input.no-empty + label {
+        font-size: 1.4rem;
+        top: -20px;
+    }
+
+    .contacto__form-input-container > label {
+        font-size: 1.6rem;
+        padding: 25px 10px;
+    }
+
+    .btn-enviar-mensaje {
+        padding: 15px 30px;
+        width: 250px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+        height: 80px;
+    }
+
+    .footer__paragraph {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mediquerie Computadora */
+@media(min-width: 1024px) {
+    /* Header */
+    .header {
+        height: 120px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 30px;
+    }
+
+    .header__name {
+        font-size: 1.8rem;
+    }
+
+    .hamburger-icon {
+        width: 30px;
+        height: 25px;
+        display: none;
+    }
+
+    .header__nav {
+        height: 100%;
+        width: auto;
+        display: flex;
+        position: static;
+    }
+
+    .header__nav > ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: var(--blue);
+        gap: 15px;
+    }
+
+    .header__nav-item {
+        font-size: 1rem;
+        background-color: transparent;
+    }
+
+    .header__nav-item:hover {
+        background-color: transparent;
+    }
+
+    .header__nav-item > a {
+        width: auto;
+        padding: 5px 10px;
+        transition: color 0.3s ease;
+    }
+
+    .header__nav-item > a:hover {
+        color: var(--light-blue);
+    }
+
+    /* Presentacion */
+    .presentation {
+        height: 40vh;
+    }
+
+    .presentation__title {
+        font-size: 3rem;
+    }
+
+    .presentation__paragraph {
+        font-size: 1rem;
+        width: 300px;
+    }
+
+    /* About me */
+    .about-me {
+        gap: 0;
+        padding: 40px 100px;
+    }
+
+    .about-me__title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .about-me__paragraph {
+        font-size: 1rem;
+        line-height: 20px;
+        width: 800px;
+    }
+
+    .about-me__paragraph:nth-of-type(1) {
+        margin-bottom: 20px;
+    }
+
+    /* Skills and Hobbies*/
+    .skills,
+    .hobbies {
+        padding: 40px 100px;
+    }
+
+    .skills__title,
+    .hobbies__title {
+        font-size: 1.5rem;
+    }
+
+    .skill__element,
+    .hobbie__element {
+        width: 100%;
+        height: 120px;
+    }
+
+    .skill__element-icon,
+    .hobbie__element-icon {
+        height: 60px;
+        width: 40px;
+    }
+
+    .skill__element-title,
+    .hobbie__element-title {
+        font-size: 1.1rem;
+    }
+
+    /* Formacion academica */
+    .formacion-academica {
+        padding: 40px 100px;
+    }
+
+    .formacion__title {
+        font-size: 1.5rem;
+    }
+
+    .formacion__container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .formacion__element {
+        width: 100%;
+    }
+
+    .formacion__element-img {
+        height: 180px;
+    }
+
+    .formacion__element-title {
+        font-size: 1.1rem;
+    }
+
+    .formacion__element-date {
+        font-size: 0.9rem;
+    }
+
+    /* Proyectos */
+    .proyectos {
+        gap: 30px;
+        padding: 40px 100px;
+        align-items: center;
+    }
+    
+    .proyectos__title {
+        font-size: 1.5rem;
+    }
+    
+    .proyectos__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .proyecto__element {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .proyecto__element-img {
+        height: 250px;
+        width: 500px;
+        margin-bottom: 10px;
+    }
+    
+    .proyecto__element-title {
+        font-size: 1.3rem;
+    }
+    
+    .buttons__container > a {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    /* Contacto */
+    .contacto {
+        padding: 40px 100px;
+    }
+
+    .contacto__title {
+        font-size: 1.5rem;
+    }
+
+    .contacto__form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contacto__form-input-container {
+        width: 45%;
+    }
+
+    .contacto__form-input {
+        height: 60px;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+
+    .contacto__form-input:focus,
+    .contacto__form-input.no-empty {
+        padding: 25px 10px 5px 10px;
+    }
+
+    .contacto__form-input:focus + label,
+    .contacto__form-input.no-empty + label {
+        font-size: 0.8rem;
+        top: -10px;
+    }
+
+    .contacto__form-input-container > label {
+        font-size: 1rem;
+        padding: 15px 10px;
+}
+
+    .btn-enviar-mensaje {
+        padding: 10px 15px;
+        width: 180px;
+        height: 50px;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+
+    .footer {
+        height: 60px;
+    }
+
+    .footer__paragraph {
+        font-size: 1.1rem;
+    }
 }

@@ -1,11 +1,19 @@
 const content = document.querySelector(".content");
+const headerName = document.querySelector(".header__name");
 const hamburgerIcon = document.querySelector(".hamburger-icon");
 const headerNav = document.querySelector(".header__nav");
 const allHeaderNavItem = document.querySelectorAll(".header__nav-item");
+const allContactoFormInput = document.querySelectorAll(".contacto__form-input");
 const line1 = document.querySelector(".line-1");
 const line2 = document.querySelector(".line-2");
 const line3 = document.querySelector(".line-3");
-const allContactoFormInput = document.querySelectorAll(".contacto__form-input");
+
+window.addEventListener("DOMContentLoaded", () => {
+  console.log(screen.width);
+  if (screen.width >= 768) {
+    headerName.textContent = "Tiago Salvatierra";
+  }
+});
 
 hamburgerIcon.addEventListener("click", () => {
   content.classList.toggle("nav-displayed");
