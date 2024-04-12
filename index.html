@@ -135,22 +135,26 @@
 
         <section class="contacto" id="Contacto">
             <h3 class="contacto__title">Contacto</h3>
-            <form class="contacto__form" autocomplete="off">
+            <form class="contacto__form" autocomplete="off" novalidate>
                 <div class="contacto__form-input-container">
-                    <input type="text" class="contacto__form-input" id="name-input" name="name-input" required>
+                    <input type="text" class="contacto__form-input" id="name-input" name="name-input" maxlength="50" required>
                     <label for="name-input">Nombre</label>
+                    <span class="error-message"></span>
                 </div>
                 <div class="contacto__form-input-container">
                     <input type="email" class="contacto__form-input" id="email-input" name="email-input" required>
                     <label for="email-input">E-mail</label>
+                    <span class="error-message"></span>
                 </div>
                 <div class="contacto__form-input-container">
-                    <input type="text" class="contacto__form-input" id="asunto-input" name="asunto-input" required>
+                    <input type="text" class="contacto__form-input" id="asunto-input" name="asunto-input" maxlength="50" required>
                     <label for="asunto-input">Asunto</label>
+                    <span class="error-message"></span>
                 </div>
                 <div class="contacto__form-input-container">
-                    <textarea class="contacto__form-input" id="mensaje-input" name="mensaje-input" cols="20" rows="20" required></textarea>
+                    <textarea class="contacto__form-input" id="mensaje-input" name="mensaje-input" minlength="50" maxlength="300" required></textarea>
                     <label for="mensaje-input">Mensaje</label>
+                    <span class="error-message"></span>
                 </div>
                 <button class="btn-enviar-mensaje" type="submit">Enviar mensaje</button>
             </form>
