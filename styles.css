@@ -194,7 +194,7 @@ html {
 
 .skill__element,
 .hobbie__element {
-    width: 160px;
+    width: 150px;
     height: 110px;
     background-color: var(--white);
     border-radius: 5px;
