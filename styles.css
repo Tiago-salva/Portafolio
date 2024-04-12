@@ -25,11 +25,6 @@ html {
     font-family: "Poppins", sans-serif;
 }
 
-.content.nav-displayed {
-    overflow-y: hidden;
-    max-height: 100vh;
-}
-
 /* Header */
 .header {
     width: 100%;

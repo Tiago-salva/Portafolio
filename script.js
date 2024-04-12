@@ -16,7 +16,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 hamburgerIcon.addEventListener("click", () => {
-  content.classList.toggle("nav-displayed");
   headerNav.classList.toggle("displayed");
   line1.classList.toggle("active");
   line2.classList.toggle("active");
