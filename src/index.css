@@ -4,7 +4,7 @@
 @theme {
     --font-inter: 'Raleway', 'sans-serif';
     --color-dan-500: #C4DFDF;
-    --color-b: #D2E9E9;
-    --color-c: #E3F4F4;
-    --color-d: #F8F6F4;
+    --color-dan-400: #D2E9E9;
+    --color-dan-300: #E3F4F4;
+    --color-dan-200: #F8F6F4;
 }
