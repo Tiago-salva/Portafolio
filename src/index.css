@@ -1,10 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-    --font-inter: 'Raleway', 'sans-serif';
-    --color-dan-500: #C4DFDF;
-    --color-dan-400: #D2E9E9;
-    --color-dan-300: #E3F4F4;
-    --color-dan-200: #F8F6F4;
+    --font-inter: 'Raleway', sans-serif;
+    --animate-moveLeft: moveLeft 10s linear infinite;
+    --animate-moveRight: moveRight 10s linear infinite;
+    --animate-moveUp: moveUp 15s infinite;
+    --animate-leftSlide: leftSlide 1s ease-in-out
+}
+
+/* About me animation */
+@keyframes moveUp {
+
+    0%,
+    20% {
+        transform: translateY(0);
+    }
+
+    25%,
+    45% {
+        transform: translateY(-25px);
+    }
+
+    50%,
+    70% {
+        transform: translateY(-50px);
+    }
+
+    75%,
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Nav animation when loading */
+@keyframes leftSlide {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 2rem));
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(calc(-100% - 2rem));
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+span {
+    user-select: none;
 }
