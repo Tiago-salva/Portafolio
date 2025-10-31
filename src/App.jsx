@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Hero from "./components/Hero";
 import Section from "./components/Section";
+import Carousel from "./components/Carousel";
 
 function App() {
   return (
     <>
-      <button className="right-5 top-5 cursor-pointer fixed">
+      <button className="right-5 top-5 cursor-pointer fixed hover:scale-110 transition-transform">
         <svg
           className="w-10 h-10 text-gray-800 dark:text-white"
           aria-hidden="true"
@@ -29,8 +30,8 @@ function App() {
 
       <main className="w-2/3 flex flex-col justify-center items-center ml-auto">
         <Section>
-          <div className="flex justify-center items-center">
-            <p>Algo</p>
+          <div className="flex justify-center items-center w-full overflow-hidden">
+            <Carousel />
           </div>
         </Section>
 
