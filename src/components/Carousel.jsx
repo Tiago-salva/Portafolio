@@ -51,11 +51,11 @@ export default function MovingCarousel({ rowsCount = 12 }) {
   const randomRows = generateRows(rowsCount);
 
   return (
-    <div className="relative h-full w-full overflow-hidden flex flex-col justify-center gap-8">
+    <div className="fixed h-full w-full overflow-hidden flex flex-col justify-center gap-8">
       {randomRows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="flex gap-8 whitespace-nowrap text-2xl text-gray-600 overflow-hidden"
+          className="flex gap-8 whitespace-nowrap text-2xl text-gray-400 overflow-hidden"
         >
           {[...Array(4)].map((_, repeatIndex) => (
             <div
