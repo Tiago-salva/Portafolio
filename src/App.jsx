@@ -6,14 +6,14 @@ import Carousel from "./components/Carousel";
 function App() {
   return (
     <>
-      <button className="right-5 top-5 cursor-pointer fixed hover:scale-110 transition-transform">
+      <button className="left-5 z-30 top-5 cursor-pointer fixed hover:scale-110 transition-transform">
         <svg
-          className="w-10 h-10 text-gray-800 dark:text-white"
+          className="w-10 h-10 z-30 text-gray-800 dark:text-gray-800"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="40"
           height="40"
-          fill="balck"
+          fill="white"
           viewBox="0 0 24 24"
         >
           <path
@@ -35,33 +35,30 @@ function App() {
           </div>
         </Section>
 
-        {/* About me */}
-        <Section id={"about-me"}>
-          <p>About me</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
-            perferendis earum harum id laudantium odio, illo obcaecati
-            cupiditate animi eligendi ut ex? Velit iure architecto sed totam
-            mollitia, consequuntur adipisci. Voluptatem accusantium, dicta
-            nesciunt commodi iure expedita cupiditate eligendi consectetur
-            dolorem? Illum explicabo ipsa error enim quisquam. Molestias porro
-            labore sit alias neque consectetur dicta, corporis dolorum enim
-            deserunt sed! Quos nostrum hic eveniet sint cum debitis corrupti
-            accusamus reprehenderit, corporis ratione consequatur, mollitia
-            dignissimos earum, quod rerum maiores ea a odit exercitationem nihil
-            optio quas quae. Totam, voluptatum illo? Explicabo nemo aspernatur
-            illum commodi quidem ratione distinctio nostrum aliquam nesci
-            voluptatibus animi, ab nostrum labore beatae autem.
+        <Section withBackground id={"about-me"}>
+          <h2 className="text-4xl font-bold mb-5">About me</h2>
+          <p className="text-2xl text-center w-4/6 leading-relaxed mb-5">
+            I'm a frontend developer who enjoys creating websites to solve
+            problems, I make sure my sites are not only clear, structured, and
+            clean but also fully functional.
+          </p>
+          <p className="text-2xl text-center w-4/6 leading-relaxed mb-5">
+            I love learning how things work under the hood and I'm always
+            looking for something new to learn, from programming languages to
+            development tools. I'm currently building new projects to share in
+            this portfolio and learning technologies like Typescript and Docker
+            to stay up to date.
+          </p>
+          <p className="text-2xl text-center w-4/6 leading-relaxed">
+            In my spare time, I play videogames or watching a movie or a series
           </p>
         </Section>
 
-        {/* Skills */}
-        <Section id={"skills"}>
+        <Section withBackground bgColor="bg-gray-200" id={"skills"}>
           <p>Skills</p>
         </Section>
 
-        {/* Projects */}
-        <Section id={"projects"}>
+        <Section withBackground id={"projects"}>
           <p>Projects</p>
         </Section>
       </main>
