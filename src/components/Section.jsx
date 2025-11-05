@@ -3,7 +3,7 @@ export default function Section({
   children,
   withBackground,
   bgColor = "bg-gray-100",
-  specificStyles,
+  specificStyles = "",
 }) {
   return (
     <section
