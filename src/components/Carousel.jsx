@@ -47,7 +47,7 @@ function generateRows(count) {
   return rows;
 }
 
-export default function MovingCarousel({ rowsCount = 12 }) {
+export default function MovingCarousel({ rowsCount = 28 }) {
   const randomRows = generateRows(rowsCount);
 
   return (
@@ -55,7 +55,7 @@ export default function MovingCarousel({ rowsCount = 12 }) {
       {randomRows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="flex gap-8 whitespace-nowrap text-2xl text-gray-400 overflow-hidden"
+          className="flex gap-8 whitespace-nowrap text-2xl text-gray-400 rotate-45"
         >
           {[...Array(4)].map((_, repeatIndex) => (
             <div
@@ -65,7 +65,14 @@ export default function MovingCarousel({ rowsCount = 12 }) {
               }`}
             >
               {row.map((word, i) => (
-                <span key={i}>{word}</span>
+                <span
+                  key={i}
+                  className={`${
+                    i % 7 === 0 ? "text-blue-300" : "text-gray-400"
+                  }`}
+                >
+                  {word}
+                </span>
               ))}
             </div>
           ))}
