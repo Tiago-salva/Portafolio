@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Carousel from "./components/Carousel";
 import Welcome from "./components/WelcomeTitle";
+import SkillList from "./components/SkillList";
 
 function App() {
   return (
@@ -66,7 +67,8 @@ function App() {
         </Section>
 
         <Section withBackground bgColor="bg-gray-200" id={"skills"}>
-          <p>Skills</p>
+          <h2>Skills</h2>
+          <SkillList></SkillList>
         </Section>
 
         <Section withBackground id={"projects"}>
