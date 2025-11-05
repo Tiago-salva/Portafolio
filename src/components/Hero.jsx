@@ -9,10 +9,7 @@ export default function Hero() {
         <h1 className="text-6xl font-bold relative text-blue-300">Tiago</h1>
 
         <div className="h-5 overflow-hidden mt-4 mb-8 ">
-          <div
-            id="profession-container"
-            className="transition-transform animate-moveUp"
-          >
+          <div id="profession-container">
             <p>Frontend Developer</p>
             <p>Backend Developer</p>
             <p>Student</p>
