@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 @import "tailwindcss";
 
+
 @theme {
     --font-inter: 'Raleway', sans-serif;
     --animate-moveLeft: moveLeft 10s linear infinite;
     --animate-moveRight: moveRight 10s linear infinite;
     --animate-moveUp: moveUp 15s infinite;
-    --animate-leftSlide: leftSlide 1s ease-in-out
+    --animate-moveDown: moveDown 1s ease-in-out;
 }
 
 /* About me animation */
@@ -33,17 +34,6 @@
     }
 }
 
-/* Nav animation when loading */
-@keyframes leftSlide {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
 @keyframes moveLeft {
     0% {
         transform: translateX(0);
@@ -64,6 +54,30 @@
     }
 }
 
+@keyframes moveDown {
+    0% {
+        transform: translateY(calc(-800%));
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
 span {
     user-select: none;
+}
+
+#carousel {
+    background: fixed center / cover;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(to bottom, white 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, white 0%, transparent 100%);
+}
+
+#about-me {
+    background: fixed center / cover;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(to top, white 0%, blue 100%);
+    mask-image: linear-gradient(to top, white 0%, blue 100%);
 }
