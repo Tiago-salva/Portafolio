@@ -47,7 +47,7 @@ function generateRows(count) {
   return rows;
 }
 
-export default function MovingCarousel({ rowsCount = 28 }) {
+export default function MovingCarousel({ rowsCount = 40 }) {
   const randomRows = generateRows(rowsCount);
 
   return (
@@ -57,7 +57,7 @@ export default function MovingCarousel({ rowsCount = 28 }) {
           key={rowIndex}
           className="flex gap-8 whitespace-nowrap text-2xl text-gray-400 rotate-45"
         >
-          {[...Array(4)].map((_, repeatIndex) => (
+          {[...Array(6)].map((_, repeatIndex) => (
             <div
               key={repeatIndex}
               className={`inline-flex gap-8 ${
