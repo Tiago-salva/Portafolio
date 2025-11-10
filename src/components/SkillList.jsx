@@ -13,13 +13,17 @@ export default function SkillList() {
   ];
 
   return (
-    <ul className="min-w-3/4 grid grid-cols-300px gap-15">
+    <ul className="min-w-3/4 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-15">
       {skillList.map((skill, index) => (
         <li
           key={index}
-          className="flex items-center gap-8 p-5 bg-blue-200 rounded-lg shadow-md "
+          className="flex items-center gap-8 p-5 bg-blue rounded-lg shadow-md "
         >
-          <img className="w-20 h-20 object-contain" src={skill.icon} alt="" />
+          <img
+            className="w-1/4 object-contain object-center"
+            src={skill.icon}
+            alt=""
+          />
           <p className="text-2xl">{skill.name}</p>
         </li>
       ))}
