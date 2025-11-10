@@ -4,10 +4,16 @@
 
 @theme {
     --font-inter: 'Raleway', sans-serif;
-    --animate-moveLeft: moveLeft 10s linear infinite;
-    --animate-moveRight: moveRight 10s linear infinite;
+    --animate-moveLeft: moveLeft 20s linear infinite;
+    --animate-moveRight: moveRight 20s linear infinite;
     --animate-moveUp: moveUp 15s infinite;
     --animate-moveDown: moveDown 1s ease-in-out;
+
+    --color-light-blue: #bedbff;
+    --color-blue: #8ec5ff;
+    --color-light-gray: #99a1af;
+    --color-gray: #9fa4ad;
+    --color-white: #ffffff;
 }
 
 /* About me animation */
@@ -81,3 +87,4 @@ span {
     -webkit-mask-image: linear-gradient(to top, white 0%, blue 100%);
     mask-image: linear-gradient(to top, white 0%, blue 100%);
 }
+
