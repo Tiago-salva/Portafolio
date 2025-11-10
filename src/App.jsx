@@ -3,6 +3,7 @@ import Section from "./components/Section";
 import Carousel from "./components/Carousel";
 import Welcome from "./components/WelcomeTitle";
 import SkillList from "./components/SkillList";
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -30,11 +31,7 @@ function App() {
       <Hero />
 
       <main className="w-2/3 flex flex-col justify-center items-center ml-auto">
-        <Section
-          withBackground
-          bgColor="bg-gradient-to-b from-gray-100/0 to-blue-200/80"
-          id={"carousel"}
-        >
+        <Section withBackground id={"carousel"}>
           <div className="flex justify-center items-center b-ra w-full overflow-hidden">
             <Welcome />
             <Carousel />
@@ -42,7 +39,7 @@ function App() {
         </Section>
 
         <Section withBackground id={"about-me"}>
-          <h2 className="text-6xl font-bold mb-20 text-blue-300">About me</h2>
+          <h2 className="text-6xl font-bold mb-20 text-blue">About me</h2>
           <div className="flex flex-col justify-center items-center gap-5">
             <p className="text-2xl text-center w-4/6 leading-relaxed mb-5">
               I'm a <strong>fullstack developer</strong> who enjoys building
@@ -66,13 +63,19 @@ function App() {
           </div>
         </Section>
 
-        <Section withBackground bgColor="bg-gray-200" id={"skills"}>
-          <h2>Skills</h2>
+        <Section withBackground bgColor="bg-light-blue" id={"skills"}>
+          <h2 className="text-6xl font-bold mb-20 text-white">Skills</h2>
           <SkillList></SkillList>
         </Section>
 
         <Section withBackground id={"projects"}>
-          <p>Projects</p>
+          <h2 className="text-6xl font-bold mb-20 text-blue">Projects</h2>
+          <Card
+            title={"Payroll settlement system"}
+            description={
+              "A web with login and sign up to kept record and calculate the payroll of your employees"
+            }
+          />
         </Section>
       </main>
     </>
