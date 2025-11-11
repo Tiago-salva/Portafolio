@@ -1,26 +1,26 @@
 export default function SkillList() {
   const skillList = [
-    { name: "HTML", icon: "/public/icons/html5-icon.svg" },
-    { name: "CSS", icon: "/public/icons/css3-icon.svg" },
-    { name: "Javascript", icon: "/public/icons/javascript-icon.svg" },
-    { name: "React", icon: "/public/icons/react-icon.svg" },
-    { name: "PostgreSQL", icon: "/public/icons/postgresql-icon.svg" },
-    { name: "Prisma", icon: "/public/icons/prisma-icon.svg" },
-    { name: "Tailwind", icon: "/public/icons/tailwind-css-icon.svg" },
-    { name: "Node.js", icon: "/public/icons/node-js-icon.svg" },
-    { name: "Git", icon: "/public/icons/git-icon.svg" },
-    { name: "Excel", icon: "/public/icons/excel-icon.svg" },
+    { name: "HTML", icon: "/public/icons/icons8-html.svg" },
+    { name: "CSS", icon: "/public/icons/icons8-css.svg" },
+    { name: "Javascript", icon: "/public/icons/icons8-javascript.svg" },
+    { name: "React", icon: "/public/icons/icons8-react-native.svg" },
+    { name: "PostgreSQL", icon: "/public/icons/icons8-postgresql.svg" },
+    { name: "Prisma", icon: "/public/icons/icons8-prisma-orm.svg" },
+    { name: "Tailwind", icon: "/public/icons/icons8-tailwind-css.svg" },
+    { name: "Node.js", icon: "/public/icons/icons8-nodejs.svg" },
+    { name: "Git", icon: "/public/icons/icons8-git.svg" },
+    { name: "Excel", icon: "/public/icons/icons8-excel.svg" },
   ];
 
   return (
-    <ul className="min-w-3/4 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-15">
+    <ul className="min-w-3/4 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-15">
       {skillList.map((skill, index) => (
         <li
           key={index}
-          className="flex items-center gap-8 p-5 bg-blue rounded-lg shadow-md "
+          className="bg-white border border-blue gap-4 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 rounded-xl p-10  flex flex-col items-center"
         >
           <img
-            className="w-1/4 object-contain object-center"
+            className="w-15 object-contain mx-auto"
             src={skill.icon}
             alt=""
           />
