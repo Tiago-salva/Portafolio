@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="h-20 w-full flex justify-center items-center">
       <ul className="flex justify-center items-center gap-3">
-        <li className="group w-12">
+        <li className="group w-15">
           <a href="https://github.com/Tiago-salva">
             <img
               src="../../public/github-brands-solid-full.svg"
@@ -11,7 +11,7 @@ export default function Footer() {
             />
           </a>
         </li>
-        <li className="group w-12">
+        <li className="group w-15">
           <a href="https://www.linkedin.com/in/tiago-salvatierra-71a70a384/">
             <img
               src="../../public/linkedin-brands-solid-full.svg"

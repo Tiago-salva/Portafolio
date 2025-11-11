@@ -8,7 +8,7 @@ import Card from "./components/Card";
 function App() {
   return (
     <>
-      <button className="left-5 z-30 top-5 cursor-pointer fixed hover:scale-110 transition-transform">
+      <button className="left-8 z-30 top-8 cursor-pointer fixed hover:scale-110 transition-transform">
         <svg
           className="w-10 h-10 z-30 text-gray-800 dark:text-gray-800"
           aria-hidden="true"
@@ -63,13 +63,21 @@ function App() {
           </div>
         </Section>
 
-        <Section withBackground bgColor="bg-light-blue" id={"skills"}>
-          <h2 className="text-6xl font-bold mb-20 text-white">Skills</h2>
+        <Section
+          withBackground
+          bgColor="bg-gradient-to-b from-white to-blue py-16"
+          id={"skills"}
+        >
+          <h2 className="text-6xl font-bold mb-20 text-blue">Skills</h2>
           <SkillList></SkillList>
         </Section>
 
-        <Section withBackground id={"projects"}>
-          <h2 className="text-6xl font-bold mb-20 text-blue">Projects</h2>
+        <Section
+          withBackground
+          bgColor="bg-gradient-to-b from-blue to-white"
+          id={"projects"}
+        >
+          <h2 className="text-6xl font-bold mb-20 text-white">Projects</h2>
           <Card
             title={"Payroll settlement system"}
             description={

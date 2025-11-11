@@ -1,7 +1,7 @@
 export default function Card({ title, description }) {
   return (
-    <div className="flex h-40 m-auto p-3 rounded-2xl bg-blue">
-      <div className="bg-gray-200 w-40 h-full flex rounded-2xl justify-center items-center">
+    <div className="flex h-40 mb-auto p-3 rounded-2xl bg-blue">
+      <div className="bg-white w-40 h-full flex rounded-2xl justify-center items-center">
         Work in progress
       </div>
       <div className="flex flex-col justify-around items-center">
