@@ -13,7 +13,7 @@ export default function SkillList() {
   ];
 
   return (
-    <ul className="min-w-3/4 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-15">
+    <ul className="w-full lg:min-w-3/4 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] p-8 lg:p-0 gap-10 lg:gap-15">
       {skillList.map((skill, index) => (
         <li
           key={index}

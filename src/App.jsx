@@ -8,9 +8,9 @@ import Card from "./components/Card";
 function App() {
   return (
     <>
-      <button className="left-8 z-30 top-8 cursor-pointer fixed hover:scale-110 transition-transform">
+      <button className="left-5 lg:left-8 z-30 top-5 lg:top-8 cursor-pointer fixed group">
         <svg
-          className="w-10 h-10 z-30 text-gray-800 dark:text-gray-800"
+          className="w-8 lg:w-10 z-30 text-gray-800 dark:text-gray-800 group-hover:dark:text-blue transition-colors"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="40"
@@ -30,9 +30,9 @@ function App() {
 
       <Hero />
 
-      <main className="w-2/3 flex flex-col justify-center items-center ml-auto">
+      <main className="lg:max-w-2/3 flex flex-col justify-center items-center lg:ml-100 xl:ml-auto">
         <Section withBackground id={"carousel"}>
-          <div className="flex justify-center items-center b-ra w-full overflow-hidden">
+          <div className="flex justify-center items-center w-full overflow-hidden">
             <Welcome />
             <Carousel />
           </div>
@@ -68,7 +68,9 @@ function App() {
           bgColor="bg-gradient-to-b from-white to-blue py-16"
           id={"skills"}
         >
-          <h2 className="text-6xl font-bold mb-20 text-blue">Skills</h2>
+          <h2 className="text-6xl font-bold mb-10 lg:mb-20 text-blue">
+            Skills
+          </h2>
           <SkillList></SkillList>
         </Section>
 

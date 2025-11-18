@@ -5,8 +5,8 @@ export default function Welcome() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const fadeStart = 0; // comienza a desaparecer al inicio
-      const fadeEnd = 800; // desaparece completamente tras 200px de scroll
+      const fadeStart = 0;
+      const fadeEnd = 800;
       const scrollY = window.scrollY;
       const newOpacity =
         1 -
@@ -20,13 +20,13 @@ export default function Welcome() {
 
   return (
     <div
-      className="w-2/3 ml-auto fixed z-50 inset-0 flex items-center justify-center pointer-events-none"
+      className="lg:max-w-2/3 lg:ml-100 xl:ml-auto fixed z-50 inset-0 flex items-center justify-center pointer-events-none"
       style={{
         opacity,
         transition: "opacity 0.1s linear",
       }}
     >
-      <h1 className="absolute text-9xl font-bold text-gray-700 animate-moveDown">
+      <h1 className="absolute text-5xl sm:text-7xl md:text-8xl xl:text-9xl font-bold text-gray-700 animate-moveDown">
         Welcome
       </h1>
     </div>

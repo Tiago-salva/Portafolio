@@ -8,7 +8,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`${specificStyles}  min-h-dvh w-full flex flex-col justify-center items-center text-center p-20 g-10 ${
+      className={`${specificStyles}  min-h-dvh w-full flex flex-col justify-center items-center text-center lg:p-20 g-10 ${
         withBackground ? bgColor : ""
       } z-10`}
     >
