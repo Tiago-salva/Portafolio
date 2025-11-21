@@ -46,7 +46,7 @@ export default function Nav() {
             className="flex items-center items-origin-center group"
           >
             <div className="hidden lg:block w-8 h-0.5 bg-light-black mr-5 group-hover:w-12 group-hover:bg-blue transition-all"></div>
-            <p className="text-[1.4rem] lg:text-2xl text-light-white group-hover:text-light-black transition-colors lg:group-hover:text-light-black">
+            <p className="text-[1.4rem] lg:text-2xl text-light-black group-hover:text-light-white transition-colors lg:group-hover:text-light-black">
               {link.title}
             </p>
           </a>
