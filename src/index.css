@@ -84,16 +84,11 @@ span {
     user-select: none;
 }
 
-#carousel {
-    background: fixed center / cover;
-    opacity: 1;
-    -webkit-mask-image: linear-gradient(to bottom, var(--color-light-white) 0%, transparent 100%);
-    mask-image: linear-gradient(to bottom, var(--color-light-white) 0%, transparent 100%);
-}
 
-#about-me {
-    background: fixed center / cover;
-    opacity: 1;
-    -webkit-mask-image: linear-gradient(to top, var(--color-light-white) 0%, blue 100%);
-    mask-image: linear-gradient(to top, var(--color-light-white) 0%, blue 100%);
+#carousel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, var(--color-light-white) 100%);
+    pointer-events: none;
 }
