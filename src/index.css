@@ -4,8 +4,8 @@
 
 @theme {
     --font-inter: 'Raleway', sans-serif;
-    --animate-moveLeft: moveLeft 20s linear infinite;
-    --animate-moveRight: moveRight 20s linear infinite;
+    --animate-moveLeft: moveLeft 30s linear infinite;
+    --animate-moveRight: moveRight 30s linear infinite;
     --animate-moveUp: moveUp 15s infinite;
     --animate-moveDown: moveDown 1s ease-in-out;
 
@@ -13,7 +13,17 @@
     --color-blue: #8ec5ff;
     --color-light-gray: #99a1af;
     --color-gray: #9fa4ad;
-    --color-white: #ffffff;
+    --color-light-white: #ffffff;
+    --color-light-black: #131313;
+}
+
+.dark-mode {
+    --color-light-blue: #bedbff;
+    --color-blue: #8ec5ff;
+    --color-light-gray: #99a1af;
+    --color-gray: #9fa4ad;
+    --color-light-white: #131313;
+    --color-light-black: #f3f3f3;
 }
 
 /* About me animation */
@@ -77,14 +87,13 @@ span {
 #carousel {
     background: fixed center / cover;
     opacity: 1;
-    -webkit-mask-image: linear-gradient(to bottom, white 0%, transparent 100%);
-    mask-image: linear-gradient(to bottom, white 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, var(--color-light-white) 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, var(--color-light-white) 0%, transparent 100%);
 }
 
 #about-me {
     background: fixed center / cover;
     opacity: 1;
-    -webkit-mask-image: linear-gradient(to top, white 0%, blue 100%);
-    mask-image: linear-gradient(to top, white 0%, blue 100%);
+    -webkit-mask-image: linear-gradient(to top, var(--color-light-white) 0%, blue 100%);
+    mask-image: linear-gradient(to top, var(--color-light-white) 0%, blue 100%);
 }
-
