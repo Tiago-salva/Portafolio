@@ -2,13 +2,21 @@ import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Carousel from "./components/Carousel";
 import Welcome from "./components/WelcomeTitle";
+import Footer from "./components/Footer";
 import SkillList from "./components/SkillList";
 import Card from "./components/Card";
 
 function App() {
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+
   return (
     <>
-      <button className="left-5 lg:left-8 z-30 top-5 lg:top-8 cursor-pointer fixed group">
+      <button
+        onClick={() => toggleDarkMode()}
+        className="left-5 lg:left-8 z-130 top-5 lg:top-8 cursor-pointer fixed group"
+      >
         <svg
           className="w-8 lg:w-10 z-30 text-gray-800 dark:text-gray-800 group-hover:dark:text-blue transition-colors"
           aria-hidden="true"
@@ -30,7 +38,7 @@ function App() {
 
       <Hero />
 
-      <main className="lg:max-w-2/3 flex flex-col justify-center items-center lg:ml-100 xl:ml-auto">
+      <main className="text-light-black lg:max-w-2/3 flex flex-col justify-center items-center lg:ml-100 xl:ml-auto">
         <Section withBackground id={"carousel"}>
           <div className="flex justify-center items-center w-full overflow-hidden">
             <Welcome />
@@ -88,6 +96,7 @@ function App() {
           />
         </Section>
       </main>
+      <Footer />
     </>
   );
 }
