@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="h-20 w-full flex justify-center items-center">
+    <footer className="relative bottom-0 left-30 h-20 w-full flex justify-items-start items-center z-120">
       <ul className="flex justify-center items-center gap-3">
         <li className="group w-15">
           <a href="https://github.com/Tiago-salva">

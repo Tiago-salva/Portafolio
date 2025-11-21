@@ -26,7 +26,7 @@ export default function Welcome() {
         transition: "opacity 0.1s linear",
       }}
     >
-      <h1 className="absolute text-5xl sm:text-7xl md:text-8xl xl:text-9xl font-bold text-gray-700 animate-moveDown">
+      <h1 className="absolute text-5xl sm:text-7xl md:text-8xl xl:text-9xl font-bold text-black animate-moveDown">
         Welcome
       </h1>
     </div>

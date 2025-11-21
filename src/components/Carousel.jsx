@@ -55,7 +55,7 @@ export default function MovingCarousel({ rowsCount = 40 }) {
       {randomRows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="flex gap-8 whitespace-nowrap text-2xl text-gray-400 rotate-45"
+          className="relative right-20 flex gap-8 whitespace-nowrap text-2xl text-gray-400 rotate-45"
         >
           {[...Array(6)].map((_, repeatIndex) => (
             <div
