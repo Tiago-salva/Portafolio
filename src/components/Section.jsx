@@ -2,7 +2,7 @@ export default function Section({
   id,
   children,
   withBackground,
-  bgColor = "bg-gray-100",
+  bgColor = "bg-light-white",
   specificStyles = "",
 }) {
   return (

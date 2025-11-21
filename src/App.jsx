@@ -18,7 +18,7 @@ function App() {
         className="left-5 lg:left-8 z-130 top-5 lg:top-8 cursor-pointer fixed group"
       >
         <svg
-          className="w-8 lg:w-10 z-30 text-gray-800 dark:text-gray-800 group-hover:dark:text-blue transition-colors"
+          className="w-8 lg:w-10 z-30 text-light-black dark:text-light-black group-hover:dark:text-blue transition-colors"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="40"
@@ -39,7 +39,7 @@ function App() {
       <Hero />
 
       <main className="text-light-black lg:max-w-2/3 flex flex-col justify-center items-center lg:ml-100 xl:ml-auto">
-        <Section withBackground id={"carousel"}>
+        <Section withBackground bgColor="bg-light-white" id={"carousel"}>
           <div className="flex justify-center items-center w-full overflow-hidden">
             <Welcome />
             <Carousel />
@@ -73,7 +73,7 @@ function App() {
 
         <Section
           withBackground
-          bgColor="bg-gradient-to-b from-white to-blue py-16"
+          bgColor="bg-gradient-to-b from-light-white to-blue py-16"
           id={"skills"}
         >
           <h2 className="text-6xl font-bold mb-10 lg:mb-20 text-blue">
@@ -84,10 +84,12 @@ function App() {
 
         <Section
           withBackground
-          bgColor="bg-gradient-to-b from-blue to-white"
+          bgColor="bg-gradient-to-b from-blue to-light-white"
           id={"projects"}
         >
-          <h2 className="text-6xl font-bold mb-20 text-white">Projects</h2>
+          <h2 className="text-6xl font-bold mb-20 text-light-white">
+            Projects
+          </h2>
           <Card
             title={"Payroll settlement system"}
             description={
@@ -96,7 +98,6 @@ function App() {
           />
         </Section>
       </main>
-      <Footer />
     </>
   );
 }

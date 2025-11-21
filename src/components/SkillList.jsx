@@ -17,7 +17,7 @@ export default function SkillList() {
       {skillList.map((skill, index) => (
         <li
           key={index}
-          className="bg-white border border-blue gap-4 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 rounded-xl p-10  flex flex-col items-center"
+          className="bg-light-white border border-blue gap-4 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 rounded-xl p-10  flex flex-col items-center"
         >
           <img
             className="w-15 object-contain mx-auto"
