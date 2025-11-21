@@ -47,7 +47,7 @@ function generateRows(count) {
   return rows;
 }
 
-export default function MovingCarousel({ rowsCount = 40 }) {
+export default function MovingCarousel({ rowsCount = 43 }) {
   const randomRows = generateRows(rowsCount);
 
   return (
