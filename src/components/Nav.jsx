@@ -10,7 +10,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="relative bg-light-white w-screen h-20 lg:w-60 z-20">
+    <nav className="relative bg-light-white w-screen lg:w-60 h-20 lg:h-auto z-20">
       <button
         className="absolute w-8 h-8 right-10 top-6 flex flex-col justify-evenly cursor-pointer z-30 lg:hidden"
         onClick={() => setNavActive(!navActive)}
@@ -37,7 +37,7 @@ export default function Nav() {
       <ul
         className={`${
           navActive ? "translate-y-20" : "-translate-y-30"
-        } relative flex items-center lg:items-baseline bg-blue h-20 transition-transform lg:relative lg:translate-y-0 lg:bg-transparent lg:flex w-full justify-around lg:flex-col px-5 lg:p-0 lg:gap-3 z-0 shadow-2xl lg:shadow-none`}
+        } relative flex items-center lg:items-baseline bg-blue transition-transform lg:relative lg:translate-y-0 lg:bg-transparent lg:flex w-full justify-around lg:flex-col px-5 lg:p-0 lg:gap-3 z-0 shadow-2xl lg:shadow-none`}
       >
         {navLinks.map((link, index) => (
           <a
