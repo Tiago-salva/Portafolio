@@ -82,11 +82,7 @@ function App() {
           <SkillList></SkillList>
         </Section>
 
-        <Section
-          withBackground
-          bgColor="bg-gradient-to-b from-blue to-light-white"
-          id={"projects"}
-        >
+        <Section withBackground bgColor="bg-blue" id={"projects"}>
           <h2 className="text-6xl font-bold mb-20 text-light-white">
             Projects
           </h2>
@@ -98,6 +94,13 @@ function App() {
           />
         </Section>
       </main>
+
+      {/* Footer for small devices */}
+      <Footer
+        className={
+          "absolute w-full bg-light-white -bottom-full py-5 z-10 lg:hidden"
+        }
+      />
     </>
   );
 }
