@@ -1,23 +1,18 @@
-export default function Footer() {
+import Linkedin from "../assets/icons/linkedin-brands-solid-full.svg?react";
+import Github from "../assets/icons/github-brands-solid-full.svg?react";
+
+export default function Footer({ className }) {
   return (
-    <footer className="relative bottom-0 left-30 h-20 w-full flex justify-items-start items-center z-120">
-      <ul className="flex justify-center items-center gap-3">
+    <footer className={`${className}`}>
+      <ul className="flex justify-center items-center gap-10 lg:gap-3">
         <li className="group w-15">
           <a href="https://github.com/Tiago-salva">
-            <img
-              src="../../public/github-brands-solid-full.svg"
-              className="w-full h-full group-hover:scale-120 transition-all"
-              alt="github"
-            />
+            <Github className="w-14 lg:w-full group-hover:text-blue transition-all dark:text-light-black fill-current" />
           </a>
         </li>
         <li className="group w-15">
           <a href="https://www.linkedin.com/in/tiago-salvatierra-71a70a384/">
-            <img
-              src="../../public/linkedin-brands-solid-full.svg"
-              className="w-full h-full group-hover:scale-120 transition-all"
-              alt="linkedin"
-            />
+            <Linkedin className="w-14 lg:w-full group-hover:text-blue transition-all dark:text-light-black fill-current" />
           </a>
         </li>
       </ul>
