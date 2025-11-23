@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Nav from "./Nav";
 
 export default function Hero() {
@@ -6,7 +7,7 @@ export default function Hero() {
       id="hero"
       className="flex flex-col items-center justify-end border-blue lg:justify-center min-h-20 lg:min-h-dvh lg:p-10 fixed bg-light-white max-w-full lg:min-w-2/6 border-b-4 lg:border-b-0 md:border-r-4 z-120 lg:shadow-2xl text-light-black"
     >
-      <div className="min-w-2/5 flex flex-col justify-center lg:m-auto z-20">
+      <div className="relative lg:mt-25 min-w-2/5 flex flex-col z-20">
         <h1 className="hidden lg:block text-7xl font-bold relative">
           Hello, I'm
         </h1>
@@ -26,6 +27,13 @@ export default function Hero() {
         </div>
 
         <Nav />
+
+        {/* Footer for large devices */}
+        <Footer
+          className={
+            "hidden h-20 mt-10 w-full lg:flex justify-items-start items-center z-120"
+          }
+        />
       </div>
     </section>
   );
